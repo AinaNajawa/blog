@@ -13,7 +13,7 @@ require 'dbcon.php';
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Student Edit</title>
+    <title>Edit All</title>
 </head>
 <body>
   
@@ -25,7 +25,7 @@ require 'dbcon.php';
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Student Edit 
+                        <h4>Edit 
                             <a href="indexx.php" class="btn btn-danger float-end">BACK</a>
                         </h4>
                     </div>
@@ -46,24 +46,24 @@ require 'dbcon.php';
                                     <input type="hidden" name="student_id" value="<?= $student['id']; ?>">
 
                                     <div class="mb-3">
-                                        <label>Student Name</label>
-                                        <input type="text" name="name" value="<?=$student['name'];?>" class="form-control">
+                                        <label>Full Name</label>
+                                        <input type="text" fullname="fullname" value="<?=$student['fullname'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Email</label>
-                                        <input type="email" name="email" value="<?=$student['email'];?>" class="form-control">
+                                        <label>Phone Number</label>
+                                        <input type="number" name="phonenumber" value="<?=$student['phonenumber'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Phone</label>
-                                        <input type="text" name="phone" value="<?=$student['phone'];?>" class="form-control">
+                                        <label>First Date</label>
+                                        <input type="date" date="firstdate" value="<?=$student['firstdate'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Course</label>
-                                        <input type="text" name="course" value="<?=$student['course'];?>" class="form-control">
+                                        <label>Last Date</label>
+                                        <input type="date" date="lastdate" value="<?=$student['lastdate'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" name="update_student" class="btn btn-primary">
-                                            Update Student
+                                        Please Update
                                         </button>
                                     </div>
 

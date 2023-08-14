@@ -1,10 +1,10 @@
 <?php
 include('dbcon.php'); 
-if(isset($_POST['nama'])) {    
-    $nama = $_POST['nama'];
-    $ndp = $_POST['ndp'];
-    $sql = "INSERT INTO students  (nama, umur, ndp)
-    VALUES ('$nama', '$umur', '$ndp')";
+if(isset($_POST['fullname'])) {    
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $sql = "INSERT INTO students  (fullname, password, email)
+    VALUES ('$fullname', '$password', '$email')";
     $samb = mysqli_connect($host, $user, $password, $database);
     $hasil = mysqli_query($samb, $sql); 
     if ($hasil)
@@ -22,22 +22,29 @@ if(isset($_POST['nama'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>page1</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Am Seeema Worldwide</title>
 </head>
 <body>
 
-<form action="indexx.php" method="post">
 
+
+<img src="img/am seema logo.png" alt="" width="100px" height="100px">
+<form action="indexx.php" method="post">
   <div class="container">
-    <label for="name"><b>Nama Penuh :</b></label>
+    <label for="name"><b>Full Name :</b></label>
     <input type="text" placeholder="name" name="name" required>
 
-    <label for="numbur"><b>NDP</b></label>
-    <input type="numbur" placeholder="Enter numbur" name="number" required>
+    <label for="pass"><b>password</b></label>
+    <input type="password" placeholder="password" name="password" required>
+    
+
+    <label for="email"><b>email</b></label>
+    <input type="email" placeholder="email" name="email" required>
 
     <button><a href="">Reset</a></button>      
     <button type="submit">Login</button>
+    <button type="submit">Admin</button>
     
   
     </label>

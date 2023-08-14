@@ -11,7 +11,7 @@ require 'dbcon.php';
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Student View</title>
+    <title>View Data</title>
 </head>
 <body>
 
@@ -21,7 +21,7 @@ require 'dbcon.php';
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Student View Details 
+                        <h4>View Details 
                             <a href="indexx.php" class="btn btn-danger float-end">BACK</a>
                         </h4>
                     </div>
@@ -40,27 +40,27 @@ require 'dbcon.php';
                                 ?>
                                 
                                     <div class="mb-3">
-                                        <label>Student Name</label>
+                                        <label>Full Name</label>
                                         <p class="form-control">
-                                            <?=$student['name'];?>
+                                            <?=$student['fullname'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Email</label>
+                                        <label>Phone Number</label>
                                         <p class="form-control">
-                                            <?=$student['email'];?>
+                                            <?=$student['phonenumber'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Phone</label>
+                                        <label>First Date</label>
                                         <p class="form-control">
-                                            <?=$student['phone'];?>
+                                            <?=$student['firstname'];?>
                                         </p>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Student Course</label>
+                                        <label>Last Date</label>
                                         <p class="form-control">
-                                            <?=$student['course'];?>
+                                            <?=$student['lastdate'];?>
                                         </p>
                                     </div>
 

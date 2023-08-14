@@ -27,12 +27,12 @@ if(isset($_POST['update_student']))
 {
     $student_id = mysqli_real_escape_string($con, $_POST['student_id']);
 
-    $name = mysqli_real_escape_string($con, $_POST['name']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
-    $phone = mysqli_real_escape_string($con, $_POST['phone']);
-    $course = mysqli_real_escape_string($con, $_POST['course']);
+    $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
+    $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
+    $firstdate = mysqli_real_escape_string($con, $_POST['firstdate']);
+    $lastdate = mysqli_real_escape_string($con, $_POST['lastdate']);
 
-    $query = "UPDATE students SET name='$name', email='$email', phone='$phone', course='$course' WHERE id='$student_id' ";
+    $query = "UPDATE students SET fullname='$fullname', phonenumber='$phonenumber', firstdate='$firstdate', lastdate='$lastdate' WHERE id='$student_id' ";
     $query_run = mysqli_query($con, $query);
 
     if($query_run)
@@ -53,16 +53,17 @@ if(isset($_POST['update_student']))
 
 if(isset($_POST['save_student']))
 {
-    $name = mysqli_real_escape_string($con, $_POST['name']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
-    $phone = mysqli_real_escape_string($con, $_POST['phone']);
-    $course = mysqli_real_escape_string($con, $_POST['course']);
+    $fullname = mysqli_real_escape_string($con, $_POST['fullname']);
+    $phonenumber = mysqli_real_escape_string($con, $_POST['phonenumber']);
+    $firstdate = mysqli_real_escape_string($con, $_POST['firstdate']);
+    $lastdate = mysqli_real_escape_string($con, $_POST['lastdate']);
 
-    $query = "INSERT INTO students (name,email,phone,course) VALUES ('$name','$email','$phone','$course')";
+    $query = "INSERT INTO students (fullname,phonenumber,firstdate,lastdate ) VALUES ('$fullname','$phonenumber','$firstdate','$lastdate')";
 
     $query_run = mysqli_query($con, $query);
-    if($query_run)
-    {
+    if($query_run)      
+    {                   
+
         $_SESSION['message'] = "Student Created Successfully";
         header("Location: student-create.php");
         exit(0);

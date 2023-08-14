@@ -12,7 +12,7 @@ session_start();
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Student Create</title>
+    <title>Am Seeema Worldwide</title>
 </head>
 <body>
   
@@ -24,7 +24,7 @@ session_start();
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Student Add 
+                        <h4>Add 
                             <a href="indexx.php" class="btn btn-danger float-end">BACK</a>
                         </h4>
                     </div>
@@ -32,23 +32,23 @@ session_start();
                         <form action="code.php" method="POST">
 
                             <div class="mb-3">
-                                <label>Student Name</label>
+                                <label>Full Name</label>
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Student Email</label>
-                                <input type="email" name="email" class="form-control">
+                                <label>Phone Number</label>
+                                <input type="text" name="text" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Student Phone</label>
+                                <label>First Date</label>
                                 <input type="text" name="phone" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label>Student Course</label>
+                                <label>Last Date</label>
                                 <input type="text" name="course" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="save_student" class="btn btn-primary">Save Student</button>
+                                <button type="submit" name="save_student" class="btn btn-primary">Save</button>
                             </div>
 
                         </form>
